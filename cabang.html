@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabang - Imah Babaturan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/pulang" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/made-tommy-outline" rel="stylesheet">
+
+    <!-- Custom Configuration for Tailwind to add colors & fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'imah-yellow': '#FFC52A',
+                        'imah-blue': '#245d8b',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/pulang');
+        @import url('https://fonts.cdnfonts.com/css/made-tommy-outline');
+
+        .font-pulang {
+            font-family: 'Pulang', sans-serif;
+        }
+
+        .font-tommy {
+            font-family: 'MADE TOMMY', sans-serif;
+        }
+
+        .font-jakarta-sans {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white font-tommy antialiased text-gray-800 min-h-screen flex flex-col">
+
+    <!-- Navbar (White Background) -->
+    <nav class="bg-white py-3 px-6 md:px-12 flex justify-between items-center sticky top-0 z-50">
+        <!-- Logo Area -->
+        <a href="index.html" class="flex flex-col text-center uppercase tracking-tighter leading-none text-imah-dark">
+            <span class="text-[0.55rem] font-bold">WARUNG KOPI</span>
+            <span class="text-xl font-extrabold -mt-1">IMAH</span>
+            <span class="text-xl font-extrabold -mt-1">BABATURAN</span>
+            <div class="flex items-center justify-center gap-1 mt-1">
+                <div class="h-px bg-imah-dark w-4"></div>
+                <span class="text-[0.45rem] font-bold">SEJAK 2015</span>
+                <div class="h-px bg-imah-dark w-4"></div>
+            </div>
+        </a>
+
+        <!-- Links & Cart -->
+        <div class="hidden md:flex items-center gap-4 lg:gap-8">
+            <a href="cabang.html"
+                class="bg-imah-blue text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide ">CABANG</a>
+            <a href="produk.html"
+                class="bg-imah-blue text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide  hover:bg-blue-800 transition">PRODUK</a>
+            <a href="kontak.html"
+                class="bg-imah-blue text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide  hover:bg-blue-800 transition">KONTAK</a>
+
+            <a href="#" class="ml-2 hover:opacity-80 transition">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="text-imah-dark">
+                    <path d="M21 8H3V21H21V8Z" />
+                    <path d="M8 8V5C8 3.89543 8.89543 3 10 3H14C15.1046 3 16 3.89543 16 5V8" />
+                    <path
+                        d="M12 14.5C13.3807 14.5 14.5 13.3807 14.5 12C14.5 10.6193 13.3807 9.5 12 9.5C10.6193 9.5 9.5 10.6193 9.5 12C9.5 13.3807 10.6193 14.5 12 14.5Z" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-imah-dark">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Banner -->
+    <div class="bg-imah-yellow py-3 text-center  relative z-40">
+        <h2 class="text-imah-blue text-xl md:text-3xl font-extrabold tracking-wide">Kabar Dari Teman</h2>
+    </div>
+
+    <!-- Cabang 1 (Blue Section) -->
+    <section class="bg-imah-blue w-full relative overflow-hidden flex flex-col md:flex-row">
+
+        <!-- Left: Image -->
+        <div class="w-full md:w-1/2 md:p-12 p-0 min-h-[400px] flex">
+            <div class="w-full h-full relative bg-cover bg-center overflow-hidden"
+                style="background-image: url('assets/LOKASI/1.png');">
+                <!-- Gradient Overlay (Blue fading in from right) -->
+                <div class="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-l from-imah-blue to-transparent"></div>
+            </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="w-full md:w-1/2 p-10 md:p-16 lg:p-20 relative z-10 flex flex-col justify-center">
+            <!-- Decorative Yellow Graphic (Plus sign) -->
+            <div
+                class="absolute scale-[170%] -right-[15%] bottom-[60%] opacity-90 transform rotate-[190deg] drop- z-0 hidden md:block">
+                <img src="assets/ASET BINTANG (1).png" alt="" class="w-64 h-auto">
+            </div>
+
+            <div class="relative z-10">
+                <h1 class="text-white text-5xl md:text-8xl font-extrabold mb-8 tracking-tight">Cabang 1</h1>
+
+                <p class="text-white/90 font-jakarta-sans text-lg leading-relaxed mb-5 text-justify">
+                    Perjalanan Imah Babaturan dimulai pada tahun 2015 di sebuah garasi rumah sederhana di Jalan Kebon
+                    Bibit, Bandung, setelah Kang Uyul memutuskan untuk resign dari pekerjaannya. Tanpa modal besar atau
+                    konsep kafe mewah, warung ini berdiri dengan niat sederhana untuk menyajikan masakan rumahan asli
+                    peninggalan almarhumah ibunda Kang Uyul agar siapa saja yang kelaparan bisa makan sampai kenyang.
+                    Kebiasaan Kang Uyul yang suka menjamu teman-temannya di rumah akhirnya dibawa ke warung ini,
+                    sehingga lahirlah nama "Imah Babaturan" dengan konsep hangat khas "Makan di Rumah Teman".
+                </p>
+                <p class="text-white/90 font-jakarta-sans text-lg leading-relaxed text-justify">
+                    Di cabang pertama ini, suasana keakraban tumbuh secara alami tanpa adanya sekat sosial antara
+                    mahasiswa, pekerja kreatif, pesepeda, hingga keluarga yang rela mengantre berjam-jam. Pelanggan
+                    lebur dalam obrolan santai sambil menikmati menu andalan seperti Nasi Cumi Cabe Ijo di atas piring
+                    enamel jadul beralas daun pisang. Ditambah kebiasaan Kang Uyul membagikan momen belanja subuh di
+                    Instagram, Cabang 1 sukses menjadi ruang komunal yang sangat dicintai karena kejujuran rasa dan
+                    kehangatannya.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cabang 2 (Yellow Section) -->
+    <section class="bg-imah-yellow w-full relative overflow-hidden flex flex-col-reverse md:flex-row">
+
+        <!-- Left: Content -->
+        <div class="w-full md:w-1/2 p-10 md:p-16 lg:p-20 relative z-10 flex flex-col justify-center">
+            <!-- Decorative Blue Graphic (Plus sign) -->
+            <div
+                class="absolute scale-[130%] -left-20 top-[1%] opacity-90 transform rotate-[10deg] drop- z-0 hidden md:block">
+                <img src="assets/ASET BINTANG (2).png" alt="" class="w-64 h-auto">
+            </div>
+
+            <div class="relative z-10">
+                <h1 class="text-white text-5xl md:text-8xl font-extrabold mb-8 tracking-tight drop-">Cabang 2
+                </h1>
+
+                <p class="text-gray-800 font-jakarta-sans font-medium text-lg leading-relaxed mb-5 text-justify">
+                    Setelah bertahun-tahun merawat keakraban di Kebon Bibit di bawah naungan PT Warisan Ibu Bapak,
+                    antusiasme pelanggan yang terus membeludak membuat ruang di Cabang 1 terasa semakin sempit. Dari
+                    sanalah lahir keputusan untuk membuka Cabang 2 sebagai langkah nyata dari target jangka panjang 5-10
+                    tahun ke depan. Cabang baru ini dibangun dengan misi besar, yaitu ingin menaikkan level masakan
+                    rumahan Nusantara agar eksistensinya makin dikenal dan tidak kalah saing dengan gempuran kuliner
+                    luar negeri.
+                </p>
+                <p class="text-gray-800 font-jakarta-sans font-medium text-lg leading-relaxed text-justify">
+                    Meskipun areanya kini lebih luas dan lega, Cabang 2 tetap berkomitmen penuh untuk menjaga "jiwa"
+                    asli Imah Babaturan dengan menyajikan masakan yang jujur dan gak ngarang. Cita rasa otentik masakan
+                    ibu, tradisi kejutan "Menu Mingguan" setiap hari Jumat, serta interior kayu dan piring kaleng blirik
+                    yang ikonik semuanya tetap dipertahankan. Cabang 2 hadir sebagai ruang tamu baru yang siap menyambut
+                    lebih banyak pelanggan, namun tetap memberikan rasa nyaman yang sama seperti lagi main ke rumah
+                    sahabat sendiri.
+                </p>
+            </div>
+        </div>
+
+        <!-- Right: Image with padding -->
+        <div class="w-full md:w-1/2 md:p-12 p-0 min-h-[400px] flex">
+            <div class="w-full h-full relative bg-cover bg-center overflow-hidden"
+                style="background-image: url('assets/LOKASI/2.png');">
+                <!-- Yellow Gradient fading in from left (visible clearly on mobile if no padding, but on desktop it blends nicely) -->
+                <div
+                    class="absolute inset-y-0 left-0 w-1/3 md:w-1/2 bg-gradient-to-r from-imah-yellow to-transparent md:hidden">
+                </div>
+                <!-- On desktop we can keep the image mostly clear, or add a subtle gradient -->
+                <div
+                    class="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-imah-yellow via-imah-yellow/50 to-transparent hidden md:block">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-white pt-16 pb-8 px-6 md:px-12 border-t border-gray-200 mt-16">
+        <div class="max-w-full mx-auto flex flex-col md:flex-row justify-between gap-12 mb-16">
+
+            <!-- Left: Logo -->
+            <div class="w-full md:w-1/4 flex justify-start md:justify-center">
+                <a href="index.html"
+                    class="flex flex-col text-center uppercase tracking-tighter leading-none text-imah-dark">
+                    <span class="text-xs font-bold">WARUNG KOPI</span>
+                    <span class="text-3xl font-extrabold -mt-1">IMAH</span>
+                    <span class="text-3xl font-extrabold -mt-1">BABATURAN</span>
+                    <div class="flex items-center justify-center gap-1 mt-1">
+                        <div class="h-px bg-imah-dark w-6"></div>
+                        <span class="text-[0.6rem] font-bold">SEJAK 2015</span>
+                        <div class="h-px bg-imah-dark w-6"></div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Middle: Info -->
+            <div class="w-full md:w-1/2 flex items-start md:items-center">
+                <div class="w-full max-w-[200px]">
+                    <div class="bg-imah-yellow py-2 px-4 rounded-md mb-4 inline-block shadow-sm">
+                        <h3 class="font-pulang text-xl font-bold">Info Imah Babaturan</h3>
+                    </div>
+                    <ul class="space-y-3 font-medium text-lg text-gray-800">
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-gray-600" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                                </path>
+                            </svg> <a href="index.html" class="hover:text-imah-blue transition">Beranda</a></li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-gray-600" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg> <a href="cabang.html" class="hover:text-imah-blue transition">Cabang</a></li>
+                        <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-utensils-icon lucide-utensils">
+                                <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
+                                <path d="M7 2v20" />
+                                <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
+                            </svg> <a href="produk.html" class="hover:text-imah-blue transition">Produk</a></li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-gray-600" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                                </path>
+                            </svg> <a href="kontak.html" class="hover:text-imah-blue transition">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col">
+                    <!-- Right: Branches Info -->
+                    <div class="w-full flex flex-col gap-8 md:pl-10">
+                        <!-- Cabang 1 -->
+                        <div>
+                            <h4 class="font-medium text-lg mb-2 text-gray-800">Cabang 1</h4>
+                            <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                                <!-- Contact Box -->
+                                <div class="w-48 border-2 border-imah-yellow bg-white shadow-sm flex-shrink-0">
+                                    <div class="text-center py-2 font-extrabold text-sm text-black">
+                                        0813 0000 0000
+                                    </div>
+                                    <div
+                                        class="bg-imah-blue text-center py-1 font-semibold text-white tracking-wider text-xs">
+                                        <a href="https://wa.me/6281300000000" target="_blank"
+                                            rel="noopener noreferrer">Whatsapp</a>
+                                    </div>
+                                </div>
+                                <!-- Address -->
+                                <p class="text-[12px] font-medium text-gray-600 leading-relaxed max-w-[250px]">
+                                    Jl. Kebon Bibit No.3,<br>
+                                    Tamansari, Kec. Bandung Wetan,<br>
+                                    Kota Bandung, Jawa Barat 40116
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cabang 2 -->
+                    <div class="w-full flex flex-col md:pl-10">
+                        <h4 class="font-medium text-lg mb-2 text-gray-800">Cabang 2</h4>
+                        <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                            <!-- Contact Box -->
+                            <div class="w-48 border-2 border-imah-yellow bg-white shadow-sm flex-shrink-0">
+                                <div class="text-center py-2 font-extrabold text-sm text-black">
+                                    0813 0000 0000
+                                </div>
+                                <div
+                                    class="bg-imah-blue text-center py-1 font-semibold text-white tracking-wider text-xs">
+                                    <a href="https://wa.me/6281300000000" target="_blank"
+                                        rel="noopener noreferrer">Whatsapp</a>
+                                </div>
+                            </div>
+                            <!-- Address -->
+                            <p class="text-[12px] font-medium text-gray-600 leading-relaxed max-w-[250px]">
+                                Jl. Tamansari No.51a,<br>
+                                Lb. Siliwangi, Kecamatan Coblong,<br>
+                                Kota Bandung, Jawa Barat 40132
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sub-footer -->
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-[13px] text-gray-800 pt-8 pb-4">
+            <p>#JujurRasanyaHangatSuasananya</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-imah-blue transition">Kebijakan Privasi</a>
+                <span class="text-gray-300">|</span>
+                <a href="#" class="hover:text-imah-blue transition">Syarat & Ketentuan</a>
+            </div>
+            <p>&copy; 2026 PT Warisan Ibu Bapak</p>
+        </div>
+    </footer>
+</body>
+
+</html>

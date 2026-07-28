@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warung Kopi Imah Babaturan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/pulang" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/made-tommy-outline" rel="stylesheet">
+
+    <!-- Custom Configuration for Tailwind to add colors & fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'imah-yellow': '#FFC52A',
+                        'imah-blue': '#245d8b',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/pulang');
+        @import url('https://fonts.cdnfonts.com/css/made-tommy-outline');
+
+        .font-pulang {
+            font-family: 'Pulang', sans-serif;
+        }
+
+        .font-tommy {
+            font-family: 'MADE TOMMY', sans-serif;
+        }
+
+        .font-jakarta-sans {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-tommy antialiased text-gray-800 min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="bg-imah-yellow py-3 px-6 md:px-12 flex justify-between items-center sticky top-0 z-50 shadow-sm">
+        <!-- Logo Area -->
+        <a href="index.html" class="flex flex-col text-center uppercase tracking-tighter leading-none text-[#333]">
+            <span class="text-[0.55rem] font-bold">WARUNG KOPI</span>
+            <span class="text-xl font-extrabold -mt-1">IMAH</span>
+            <span class="text-xl font-extrabold -mt-1">BABATURAN</span>
+            <div class="flex items-center justify-center gap-1 mt-1">
+                <div class="h-px bg-[#333] w-4"></div>
+                <span class="text-[0.45rem] font-bold">SEJAK 2015</span>
+                <div class="h-px bg-[#333] w-4"></div>
+            </div>
+        </a>
+
+        <!-- Links & Cart -->
+        <div class="hidden md:flex items-center gap-4 lg:gap-8">
+            <a href="cabang.html"
+                class="bg-imah-blue text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide hover:bg-blue-900 transition shadow-md">CABANG</a>
+            <a href="produk.html"
+                class="bg-imah-blue text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide hover:bg-blue-900 transition shadow-md">PRODUK</a>
+            <a href="kontak.html"
+                class="bg-imah-blue text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide hover:bg-blue-900 transition shadow-md">KONTAK</a>
+
+            <!-- Icon placeholder for the box/cart -->
+            <a href="#" class="ml-2 hover:opacity-80 transition">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 8H3V21H21V8Z" />
+                    <path d="M8 8V5C8 3.89543 8.89543 3 10 3H14C15.1046 3 16 3.89543 16 5V8" />
+                    <path
+                        d="M12 14.5C13.3807 14.5 14.5 13.3807 14.5 12C14.5 10.6193 13.3807 9.5 12 9.5C10.6193 9.5 9.5 10.6193 9.5 12C9.5 13.3807 10.6193 14.5 12 14.5Z" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-gray-800">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow relative w-full h-[85vh] md:h-[calc(100vh-80px)] bg-cover bg-center overflow-hidden"
+        style="background-image: url('assets/BERANDA/HERO\ IMAGE\ 1.png');">
+        <!-- Content Container -->
+        <div class="relative h-full w-full max-w-full mx-auto px-6 md:px-12 py-10 flex flex-col justify-between">
+
+            <!-- Top Right Text -->
+            <div class="self-end text-right mt-4 md:mt-10 mr-4 md:mr-10">
+                <h1
+                    class="font-pulang text-white text-5xl md:text-7xl lg:text-8xl leading-[1.1] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">
+                    Gitar<br>Tawa dan<br>Mereka
+                </h1>
+            </div>
+
+            <!-- Bottom Left Text -->
+            <div class="self-start mb-4 md:mb-10 ml-2 md:ml-4">
+                <h2
+                    class="font-pulang text-white text-5xl md:text-7xl lg:text-8xl leading-[1.1] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">
+                    frekuensi<br>sama, obrolan<br>tanpa jeda.
+                </h2>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- About & Philosophy Section (2x2 Grid) -->
+    <section class="grid grid-cols-1 md:grid-cols-2 w-full">
+        <!-- Top Left: Image of Founder -->
+        <div class="h-[40vh] md:h-auto md:min-h-[80vh] bg-cover bg-center"
+            style="background-image: url('assets/BERANDA/HERO\ IMAGE\ 2.png');">
+        </div>
+
+        <!-- Top Right: Founder Info (Blue) -->
+        <div class="bg-[#4774af] p-10 md:px-20 flex flex-col justify-center relative overflow-hidden">
+            <!-- Decorative Yellow Graphic -->
+            <div class="absolute -right-20 top-1/4 opacity-90 drop-shadow-lg rotate-[180deg] blur">
+                <img src="assets/ASET BINTANG (1).png" alt="" class="w-64 h-auto">
+            </div>
+
+            <div class="flex flex-col gap-12">
+                <div class="flex flex-col mb-20">
+                    <h3 class="text-white text-5xl md:text-7xl font-extrabold leading-[1.1] mb-2 tracking-tight">
+                        Mohammad<br>Nurul Hudha</h3>
+                    <p class="text-white md:text-2xl mb-16 font-light">Founder<br>Warung Kopi Imah Babaturan
+                    </p>
+                </div>
+                <p class="text-white font-jakarta-sans text-lg md:text-xl leading-relaxed text-justify">
+                    Menjadi tempat makan yang "mengalir apa adanya" namun tetap punya potensi untuk terus berkembang. Di
+                    mana setiap orang yang datang pasti bisa makan sampai kenyang, dengan suasana sehangat rumah teman
+                    sendiri
+                </p>
+            </div>
+        </div>
+
+        <!-- Bottom Left: Philosophy (White) -->
+        <div class="bg-white p-10 md:p-20 flex flex-col justify-center items-center md:items-start gap-12">
+            <p class="text-gray-600 text-sm md:text-2xl leading-relaxed">
+                Menyajikan Masakan Rumahan yang Jujur dan Otentik menggunakan resep asli turun-temurun dari ibunda
+            </p>
+            <p class="text-gray-600 text-sm md:text-2xl leading-relaxed">
+                Memberikan Pengalaman Makan di Rumah Teman menciptakan suasana hangat, akrab sehingga setiap pengunjung
+                merasa nyaman seperti bertamu ke rumah sahabat.
+            </p>
+        </div>
+
+        <!-- Bottom Right: Comfort Image with pulang -->
+        <div class="h-[50vh] md:h-auto md:min-h-[600px] bg-cover bg-center relative flex items-center justify-end p-10 md:p-16"
+            style="background-image: url('assets/BERANDA/HERO\ IMAGE\ 3.png');">
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black/60"></div>
+
+            <h2
+                class="relative z-10 font-pulang text-white text-5xl md:text-8xl leading-[1.1] text-right drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] max-w-sm md:max-w-[40vw]">
+                Nyaman<br>Seperti di<br>Rumah Teman
+            </h2>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-white pt-16 pb-8 px-6 md:px-12 border-t border-gray-200 mt-16">
+        <div class="max-w-full mx-auto flex flex-col md:flex-row justify-between gap-12 mb-16">
+
+            <!-- Left: Logo -->
+            <div class="w-full md:w-1/4 flex justify-start md:justify-center">
+                <a href="index.html"
+                    class="flex flex-col text-center uppercase tracking-tighter leading-none text-imah-dark">
+                    <span class="text-xs font-bold">WARUNG KOPI</span>
+                    <span class="text-3xl font-extrabold -mt-1">IMAH</span>
+                    <span class="text-3xl font-extrabold -mt-1">BABATURAN</span>
+                    <div class="flex items-center justify-center gap-1 mt-1">
+                        <div class="h-px bg-imah-dark w-6"></div>
+                        <span class="text-[0.6rem] font-bold">SEJAK 2015</span>
+                        <div class="h-px bg-imah-dark w-6"></div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Middle: Info -->
+            <div class="w-full md:w-1/2 flex items-start md:items-center">
+                <div class="w-full max-w-[200px]">
+                    <div class="bg-imah-yellow py-2 px-4 rounded-md mb-4 inline-block shadow-sm">
+                        <h3 class="font-pulang text-xl font-bold">Info Imah Babaturan</h3>
+                    </div>
+                    <ul class="space-y-3 font-medium text-lg text-gray-800">
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-gray-600" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                                </path>
+                            </svg> <a href="index.html" class="hover:text-imah-blue transition">Beranda</a></li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-gray-600" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg> <a href="cabang.html" class="hover:text-imah-blue transition">Cabang</a></li>
+                        <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-utensils-icon lucide-utensils">
+                                <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
+                                <path d="M7 2v20" />
+                                <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
+                            </svg> <a href="produk.html" class="hover:text-imah-blue transition">Produk</a></li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-gray-600" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                                </path>
+                            </svg> <a href="kontak.html" class="hover:text-imah-blue transition">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col">
+                    <!-- Right: Branches Info -->
+                    <div class="w-full flex flex-col gap-8 md:pl-10">
+                        <!-- Cabang 1 -->
+                        <div>
+                            <h4 class="font-medium text-lg mb-2 text-gray-800">Cabang 1</h4>
+                            <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                                <!-- Contact Box -->
+                                <div class="w-48 border-2 border-imah-yellow bg-white shadow-sm flex-shrink-0">
+                                    <div class="text-center py-2 font-extrabold text-sm text-black">
+                                        0813 0000 0000
+                                    </div>
+                                    <div
+                                        class="bg-imah-blue text-center py-1 font-semibold text-white tracking-wider text-xs">
+                                        <a href="https://wa.me/6281300000000" target="_blank"
+                                            rel="noopener noreferrer">Whatsapp</a>
+                                    </div>
+                                </div>
+                                <!-- Address -->
+                                <p class="text-[12px] font-medium text-gray-600 leading-relaxed max-w-[250px]">
+                                    Jl. Kebon Bibit No.3,<br>
+                                    Tamansari, Kec. Bandung Wetan,<br>
+                                    Kota Bandung, Jawa Barat 40116
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cabang 2 -->
+                    <div class="w-full flex flex-col md:pl-10">
+                        <h4 class="font-medium text-lg mb-2 text-gray-800">Cabang 2</h4>
+                        <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                            <!-- Contact Box -->
+                            <div class="w-48 border-2 border-imah-yellow bg-white shadow-sm flex-shrink-0">
+                                <div class="text-center py-2 font-extrabold text-sm text-black">
+                                    0813 0000 0000
+                                </div>
+                                <div
+                                    class="bg-imah-blue text-center py-1 font-semibold text-white tracking-wider text-xs">
+                                    <a href="https://wa.me/6281300000000" target="_blank"
+                                        rel="noopener noreferrer">Whatsapp</a>
+                                </div>
+                            </div>
+                            <!-- Address -->
+                            <p class="text-[12px] font-medium text-gray-600 leading-relaxed max-w-[250px]">
+                                Jl. Tamansari No.51a,<br>
+                                Lb. Siliwangi, Kecamatan Coblong,<br>
+                                Kota Bandung, Jawa Barat 40132
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sub-footer -->
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-[13px] text-gray-800 pt-8 pb-4">
+            <p>#JujurRasanyaHangatSuasananya</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-imah-blue transition">Kebijakan Privasi</a>
+                <span class="text-gray-300">|</span>
+                <a href="#" class="hover:text-imah-blue transition">Syarat & Ketentuan</a>
+            </div>
+            <p>&copy; 2026 PT Warisan Ibu Bapak</p>
+        </div>
+    </footer>
+</body>
+
+</html>

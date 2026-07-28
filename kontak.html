@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Imah Babaturan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/pulang" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/made-tommy-outline" rel="stylesheet">
+
+    <!-- Custom Configuration for Tailwind to add colors & fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'imah-yellow': '#FFC52A',
+                        'imah-blue': '#245d8b',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/pulang');
+        @import url('https://fonts.cdnfonts.com/css/made-tommy-outline');
+
+        .font-pulang {
+            font-family: 'Pulang', sans-serif;
+        }
+
+        .font-tommy {
+            font-family: 'MADE TOMMY', sans-serif;
+        }
+
+        .font-jakarta-sans {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white font-tommy antialiased text-gray-800 min-h-screen flex flex-col overflow-x-hidden">
+
+    <!-- Navbar (White Background) -->
+    <nav class="bg-white py-3 px-6 md:px-12 flex justify-between items-center sticky top-0 z-50 shadow-sm">
+        <!-- Logo Area -->
+        <a href="index.html" class="flex flex-col text-center uppercase tracking-tighter leading-none text-imah-dark">
+            <span class="text-[0.55rem] font-bold">WARUNG KOPI</span>
+            <span class="text-xl font-bold -mt-1">IMAH</span>
+            <span class="text-xl font-bold -mt-1">BABATURAN</span>
+            <div class="flex items-center justify-center gap-1 mt-1">
+                <div class="h-px bg-imah-dark w-4"></div>
+                <span class="text-[0.45rem] font-bold">SEJAK 2015</span>
+                <div class="h-px bg-imah-dark w-4"></div>
+            </div>
+        </a>
+
+        <!-- Links & Cart -->
+        <div class="hidden md:flex items-center gap-4 lg:gap-8">
+            <a href="cabang.html"
+                class="bg-imah-blue text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide shadow-md hover:bg-blue-800 transition">CABANG</a>
+            <a href="produk.html"
+                class="bg-imah-blue text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide shadow-md hover:bg-blue-800 transition">PRODUK</a>
+            <a href="kontak.html"
+                class="bg-imah-blue text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide shadow-md">KONTAK</a>
+
+            <a href="#" class="ml-2 hover:opacity-80 transition">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="text-imah-dark">
+                    <path d="M21 8H3V21H21V8Z" />
+                    <path d="M8 8V5C8 3.89543 8.89543 3 10 3H14C15.1046 3 16 3.89543 16 5V8" />
+                    <path
+                        d="M12 14.5C13.3807 14.5 14.5 13.3807 14.5 12C14.5 10.6193 13.3807 9.5 12 9.5C10.6193 9.5 9.5 10.6193 9.5 12C9.5 13.3807 10.6193 14.5 12 14.5Z" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-imah-dark">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Banner -->
+    <div class="bg-imah-yellow py-3 text-center shadow-sm relative z-40">
+        <h2 class="text-imah-blue text-xl md:text-2xl font-bold tracking-wide">Kabar Dari Teman</h2>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative w-full h-[80vh] md:h-[calc(100vh-130px)] overflow-hidden bg-black">
+
+        <!-- Left Background -->
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/LOKASI/1.png');"></div>
+
+        <!-- Right Background with fade in the middle -->
+        <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image: url('assets/KONTAK/HERO\ IMAGE.png'); mask-image: linear-gradient(to right, transparent 0%, transparent 40%, black 60%, black 100%); -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 40%, black 60%, black 100%);">
+        </div>
+
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black/40 z-0"></div>
+
+        <div class="relative z-10 h-full w-full mx-auto px-20 md:px-30 py-10 flex flex-col justify-center items-center">
+
+            <!-- Center Composition: Coffee, Note, Pen (CSS Approximation) -->
+            <div class="relative w-full max-w-3xl aspect-[4/3] md:aspect-video flex items-center justify-center">
+
+                <!-- White Sticky Note -->
+                <div
+                    class="absolute z-10 left-8 md:left-[40%] top-16 md:-top-[25%] w-48 md:w-72 transition hover:rotate-6 duration-300 scale-[220%] transform">
+                    <img src="assets/KONTAK/kertas.png" alt="Note" class="w-full h-auto drop-shadow-xl">
+                </div>
+
+                <!-- Coffee Cup -->
+                <div
+                    class="absolute right-8 md:-right-[30%] top-4 md:-top-[25%] z-20 w-40 md:w-64 transition hover:scale-[330%] scale-[320%] duration-300">
+                    <img src="assets/KONTAK/kopi.png" alt="Coffee" class="w-full h-auto">
+                </div>
+
+                <!-- Pen -->
+                <div
+                    class="absolute bottom-16 md:-bottom-[10%] left-20 md:left-[70%] z-30 w-64 md:w-96 transition hover:scale-[310%] scale-[300%] duration-300 transform">
+                    <img src="assets/KONTAK/pulpen.png" alt="Pen" class="w-full h-auto drop-shadow-xl">
+                </div>
+
+                <!-- Floating Texts -->
+                <p
+                    class="absolute top-4 md:-top-[0%] left-12 md:left-[25%] transform -translate-y-6 md:-translate-y-12 -rotate-[37deg] font-pulang text-white text-2xl md:text-4xl drop-shadow-md z-30">
+                    Kesan Pesan</p>
+                <p
+                    class="absolute bottom-6 md:-bottom-[20%] left-1/3 transform translate-y-4 md:translate-y-8 font-pulang text-white text-2xl md:text-4xl drop-shadow-md z-30">
+                    Lokasi</p>
+                <p
+                    class="absolute bottom-24 md:bottom-[20%] right-20 md:-right-48 transform -rotate-[20deg] font-pulang text-white text-2xl md:text-4xl drop-shadow-md z-30">
+                    Kontak</p>
+            </div>
+
+            <!-- Bottom Left Text -->
+            <div class="absolute bottom-6 md:bottom-20 left-6 md:left-10">
+                <h1 class="font-pulang text-white text-5xl md:text-8xl drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">
+                    Informasi
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="w-full max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
+
+        <!-- Cerita yang Bikin Senang Form -->
+        <div class="max-w-3xl mx-auto flex flex-col items-center mb-24 md:mb-32">
+            <h2 class="font-pulang text-imah-blue text-4xl md:text-[3.5rem] mb-10 text-center tracking-wide font-bold">
+                Cerita yang Bikin Senang</h2>
+            <input type="text"
+                class="w-full border-4 border-imah-blue rounded-full px-8 py-4 md:py-5 mb-6 focus:outline-none focus:ring-4 focus:ring-blue-300 text-lg md:text-xl shadow-inner bg-white">
+            <button
+                class="bg-imah-blue text-white font-pulang text-2xl md:text-3xl px-16 py-2 md:py-3 rounded-full hover:bg-blue-800 transition shadow-lg mt-2 tracking-wider">Kirim</button>
+        </div>
+
+        <!-- Lokasi -->
+        <div class="w-full">
+            <h2 class="text-imah-blue text-4xl md:text-6xl font-bold mb-10 md:mb-16">Lokasi</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+
+                <!-- Cabang 1 -->
+                <div>
+                    <!-- Map Placeholder -->
+                    <iframe class="w-full h-64 md:h-[25vh] mb-6 rounded-sm shadow-md border-0"
+                        src="https://maps.google.com/maps?q=-6.898115,107.6077061&hl=id&z=17&output=embed"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 class="font-bold text-xl md:text-2xl mb-4 text-black">Cabang 1</h3>
+
+                    <a href="https://wa.me/6281300000000" target="_blank" rel="noopener noreferrer"
+                        class="block w-full max-w-[320px] border-2 border-gray-100 bg-white shadow-sm hover:shadow-md transition">
+                        <div
+                            class="text-center py-4 border-b-4 border-imah-yellow font-bold text-xl md:text-2xl text-black">
+                            0813 0000 0000
+                        </div>
+                        <div
+                            class="bg-imah-blue text-center py-3 font-semibold text-white tracking-wider text-sm md:text-base">
+                            Whatsapp
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Cabang 2 -->
+                <div>
+                    <!-- Map Placeholder -->
+                    <iframe class="w-full h-64 md:h-[25vh] mb-6 rounded-sm shadow-md border-0"
+                        src="https://maps.google.com/maps?q=-6.8970905,107.6094628&hl=id&z=17&output=embed"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <h3 class="font-bold text-xl md:text-2xl mb-4 text-black">Cabang 2</h3>
+
+                    <a href="https://wa.me/6281300000000" target="_blank" rel="noopener noreferrer"
+                        class="block w-full max-w-[320px] border-2 border-gray-100 bg-white shadow-sm hover:shadow-md transition">
+                        <div
+                            class="text-center py-4 border-b-4 border-imah-yellow font-bold text-xl md:text-2xl text-black">
+                            0813 0000 0000
+                        </div>
+                        <div
+                            class="bg-imah-blue text-center py-3 font-semibold text-white tracking-wider text-sm md:text-base">
+                            Whatsapp
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-white pt-16 pb-8 px-6 md:px-12 border-t border-gray-200 mt-16">
+        <div class="max-w-full mx-auto flex flex-col md:flex-row justify-between gap-12 mb-16">
+
+            <!-- Left: Logo -->
+            <div class="w-full md:w-1/4 flex justify-start md:justify-center">
+                <a href="index.html"
+                    class="flex flex-col text-center uppercase tracking-tighter leading-none text-imah-dark">
+                    <span class="text-xs font-bold">WARUNG KOPI</span>
+                    <span class="text-3xl font-extrabold -mt-1">IMAH</span>
+                    <span class="text-3xl font-extrabold -mt-1">BABATURAN</span>
+                    <div class="flex items-center justify-center gap-1 mt-1">
+                        <div class="h-px bg-imah-dark w-6"></div>
+                        <span class="text-[0.6rem] font-bold">SEJAK 2015</span>
+                        <div class="h-px bg-imah-dark w-6"></div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Middle: Info -->
+            <div class="w-full md:w-1/2 flex items-start md:items-center">
+                <div class="w-full max-w-[200px]">
+                    <div class="bg-imah-yellow py-2 px-4 rounded-md mb-4 inline-block shadow-sm">
+                        <h3 class="font-pulang text-xl font-bold">Info Imah Babaturan</h3>
+                    </div>
+                    <ul class="space-y-3 font-medium text-lg text-gray-800">
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-gray-600" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                                </path>
+                            </svg> <a href="index.html" class="hover:text-imah-blue transition">Beranda</a></li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-gray-600" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg> <a href="cabang.html" class="hover:text-imah-blue transition">Cabang</a></li>
+                        <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-utensils-icon lucide-utensils">
+                                <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
+                                <path d="M7 2v20" />
+                                <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
+                            </svg> <a href="produk.html" class="hover:text-imah-blue transition">Produk</a></li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-gray-600" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                                </path>
+                            </svg> <a href="kontak.html" class="hover:text-imah-blue transition">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col">
+                    <!-- Right: Branches Info -->
+                    <div class="w-full flex flex-col gap-8 md:pl-10">
+                        <!-- Cabang 1 -->
+                        <div>
+                            <h4 class="font-medium text-lg mb-2 text-gray-800">Cabang 1</h4>
+                            <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                                <!-- Contact Box -->
+                                <div class="w-48 border-2 border-imah-yellow bg-white shadow-sm flex-shrink-0">
+                                    <div class="text-center py-2 font-extrabold text-sm text-black">
+                                        0813 0000 0000
+                                    </div>
+                                    <div
+                                        class="bg-imah-blue text-center py-1 font-semibold text-white tracking-wider text-xs">
+                                        <a href="https://wa.me/6281300000000" target="_blank"
+                                            rel="noopener noreferrer">Whatsapp</a>
+                                    </div>
+                                </div>
+                                <!-- Address -->
+                                <p class="text-[12px] font-medium text-gray-600 leading-relaxed max-w-[250px]">
+                                    Jl. Kebon Bibit No.3,<br>
+                                    Tamansari, Kec. Bandung Wetan,<br>
+                                    Kota Bandung, Jawa Barat 40116
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cabang 2 -->
+                    <div class="w-full flex flex-col md:pl-10">
+                        <h4 class="font-medium text-lg mb-2 text-gray-800">Cabang 2</h4>
+                        <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                            <!-- Contact Box -->
+                            <div class="w-48 border-2 border-imah-yellow bg-white shadow-sm flex-shrink-0">
+                                <div class="text-center py-2 font-extrabold text-sm text-black">
+                                    0813 0000 0000
+                                </div>
+                                <div
+                                    class="bg-imah-blue text-center py-1 font-semibold text-white tracking-wider text-xs">
+                                    <a href="https://wa.me/6281300000000" target="_blank"
+                                        rel="noopener noreferrer">Whatsapp</a>
+                                </div>
+                            </div>
+                            <!-- Address -->
+                            <p class="text-[12px] font-medium text-gray-600 leading-relaxed max-w-[250px]">
+                                Jl. Tamansari No.51a,<br>
+                                Lb. Siliwangi, Kecamatan Coblong,<br>
+                                Kota Bandung, Jawa Barat 40132
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sub-footer -->
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-[13px] text-gray-800 pt-8 pb-4">
+            <p>#JujurRasanyaHangatSuasananya</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-imah-blue transition">Kebijakan Privasi</a>
+                <span class="text-gray-300">|</span>
+                <a href="#" class="hover:text-imah-blue transition">Syarat & Ketentuan</a>
+            </div>
+            <p>&copy; 2026 PT Warisan Ibu Bapak</p>
+        </div>
+    </footer>
+</body>
+
+</html>
