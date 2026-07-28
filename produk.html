@@ -49,7 +49,7 @@
 <body class="bg-white font-tommy antialiased text-gray-800 min-h-screen flex flex-col">
 
     <!-- Navbar (White Background) -->
-    <nav class="bg-white py-3 px-6 md:px-12 flex justify-between items-center sticky top-0 z-50">
+    <nav class="bg-imah-yellow py-3 px-6 md:px-12 flex justify-between items-center sticky top-0 z-50">
         <!-- Logo Area -->
         <a href="index.html" class="flex flex-col text-center uppercase tracking-tighter leading-none text-imah-dark">
             <span class="text-[0.55rem] font-bold">WARUNG KOPI</span>
@@ -64,6 +64,8 @@
 
         <!-- Links & Cart -->
         <div class="hidden md:flex items-center gap-4 lg:gap-8">
+            <a href="index.html"
+                class="bg-imah-blue text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide hover:bg-blue-800 transition">BERANDA</a>
             <a href="cabang.html"
                 class="bg-imah-blue text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide hover:bg-blue-800 transition">CABANG</a>
             <a href="produk.html"
@@ -91,13 +93,8 @@
         </button>
     </nav>
 
-    <!-- Banner -->
-    <div class="bg-imah-yellow py-3 text-center relative z-40">
-        <h2 class="text-imah-blue text-xl md:text-2xl font-extrabold tracking-wide">Kabar Dari Teman</h2>
-    </div>
-
     <!-- Hero Section -->
-    <section class="relative w-full h-[100vh] bg-cover bg-center overflow-hidden"
+    <section class="relative w-full h-[90vh] bg-cover bg-center overflow-hidden"
         style="background-image: url('assets/MENU/makan.png');">
 
         <div class="relative h-full w-full mx-auto px-6 md:px-12 py-10 flex flex-col justify-end">
@@ -120,15 +117,16 @@
         </div>
 
         <!-- Content Container -->
-        <div
-            class="relative z-10 w-[80vw] h-[90vh] mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+        <div class="relative z-10 w-full h-[80vh] mx-auto flex flex-col items-center justify-between gap-12">
 
             <!-- Left Side: Featured Menu -->
-            <div class="w-full md:w-1/2 flex flex-col items-start relative z-20">
+            <div class="w-full flex flex-col items-start relative z-20">
                 <!-- Title Box -->
                 <div class="bg-imah-yellow px-8 py-3 mb-8 md:mb-12 inline-block">
-                    <h2 class="text-white text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-none drop">
-                        Yang Bikin Kangen</h2>
+                    <h2
+                        class="text-white font-pulang text-3xl md:text-5xl lg:text-7xl tracking-tight leading-none drop">
+                        Menu Yang Bikin Kangen
+                    </h2>
                 </div>
 
                 <!-- Image Container -->
@@ -140,28 +138,324 @@
                     </div>
 
                     <!-- Featured Image -->
-                    <!-- Used an image of sambal squid if possible, otherwise a general food image -->
-                    <img src="assets/MENU/MAKANAN BERAT/CABE IJO.png" alt="Cumi Sambel Ijo"
-                        class="relative z-10 w-full h-auto object-cover aspect-[4/3]l rounded-sm">
+                    <div class="grid grid-cols-3 gap-14">
+                        <div class="flex flex-col justify-center items-center">
+                            <img src="assets/MENU/MAKANAN BERAT/CABE IJO.png" alt="Cumi Sambel Ijo"
+                                class="relative z-10 w-full h-auto object-cover rounded-sm">
+                            <!-- Image Caption -->
+                            <h3 class="text-white font-pulang text-3xl md:text-4xl mt-6 tracking-wide drop">Cumi Sambel
+                                Ijo
+                            </h3>
+                        </div>
+                        <div class="flex flex-col justify-center items-center">
+                            <img src="assets/MENU/MAKANAN BERAT/CABE IJO.png" alt="Cumi Sambel Ijo"
+                                class="relative z-10 w-full h-auto object-cover rounded-sm">
+                            <!-- Image Caption -->
+                            <h3 class="text-white font-pulang text-3xl md:text-4xl mt-6 tracking-wide drop">Cumi Sambel
+                                Ijo
+                            </h3>
+                        </div>
+                        <div class="flex flex-col justify-center items-center">
+                            <img src="assets/MENU/MAKANAN BERAT/CABE IJO.png" alt="Cumi Sambel Ijo"
+                                class="relative z-10 w-full h-auto object-cover rounded-sm">
+                            <!-- Image Caption -->
+                            <h3 class="text-white font-pulang text-3xl md:text-4xl mt-6 tracking-wide drop">Cumi Sambel
+                                Ijo
+                            </h3>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Image Caption -->
-                <h3 class="text-white text-3xl md:text-4xl mt-6 tracking-wide drop">Cumi Sambel Ijo
-                </h3>
             </div>
 
             <!-- Right Side: Button -->
-            <div
-                class="w-full md:w-1/2 flex justify-center md:justify-end items-center relative z-20 mt-10 md:mt-0 pr-0 md:pr-12">
-                <a href="menu.html"
-                    class="bg-imah-yellow text-white px-10 py-4 md:px-14 md:py-6 rounded-full font-extrabold text-2xl md:text-4xl tracking-wide hover:bg-yellow-500 hover:-translate-y-1 transition transform flex items-center justify-center">
+            <div class="w-full flex justify-center items-center relative z-20 mt-10 md:mt-0 pr-0 md:pr-12">
+                <a href="#menu-section"
+                    class="bg-black/20 text-white px-10 py-4 md:px-14 md:py-6 rounded-lg text-2xl md:text-4xl tracking-wide hover:bg-black/30 hover:-translate-y-1 transition transform flex items-center justify-center">
                     Menu Lainnya
                 </a>
             </div>
-
         </div>
     </section>
 
+    <!-- Menu -->
+    <section id="menu-section" class="w-full mx-auto px-6 md:px-[10%] py-16 relative overflow-hidden">
+
+        <!-- Decorative Assets -->
+        <div class="absolute -left-48 top-10 opacity-70 z-0 hidden md:block">
+            <img src="assets/ASET BINTANG (1).png" class="w-[300px] md:w-[500px] h-auto" alt="">
+        </div>
+        <div class="absolute -right-48 top-1/4 opacity-70 z-0 hidden md:block">
+            <img src="assets/ASET BINTANG (2).png" class="w-[300px] md:w-[500px] h-auto" alt="">
+        </div>
+        <div class="absolute -left-48 bottom-1/4 opacity-70 z-0 hidden md:block">
+            <img src="assets/ASET BINTANG (2).png" class="w-[300px] md:w-[500px] h-auto" alt="">
+        </div>
+        <div class="absolute -right-48 bottom-10 opacity-70 z-0 hidden md:block">
+            <img src="assets/ASET BINTANG (1).png" class="w-[300px] md:w-[500px] h-auto" alt="">
+        </div>
+
+        <div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+            <div class="flex flex-col gap-2">
+                <h1 class="text-imah-blue font-pulang text-5xl md:text-8xl tracking-wide">MENU</h1>
+                <div class="bg-imah-yellow text-black px-4 py-1.5 inline-block rounded-sm text-2xl shadow-sm">
+                    diambil - diantar - ditempat
+                </div>
+            </div>
+
+            <div class="flex gap-4">
+                <button id="btn-makanan"
+                    class="bg-imah-yellow text-imah-blue px-6 py-2 rounded-md hover:bg-yellow-500 transition shadow-sm text-lg md:text-xl border border-imah-yellow">Makanan</button>
+                <button id="btn-minuman"
+                    class="bg-imah-blue text-white px-6 py-2 rounded-md hover:bg-blue-800 transition shadow-sm text-lg md:text-xl border border-imah-blue">Minuman
+                    & Cemilan</button>
+            </div>
+        </div>
+
+        <div id="makanan-content">
+            <h2 class="relative z-10 text-imah-blue font-pulang text-6xl md:text-7xl mb-12 drop-shadow-sm">Makanan Berat
+            </h2>
+
+            <div class="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+                <!-- Item 1 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MENU/MAKANAN BERAT/RAWON.png" alt="Rawon"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Rawon</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 33.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Rawon menghadirkan aroma rempah yang
+                        dalam,
+                        kuah hitam pekat dari kluwek memberi rasa gurih khas, sementara potongan daging sapi empuk
+                        menambah
+                        kelezatan setiap suapan.</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MENU/MAKANAN BERAT/mie.png" alt="Mie Ayam"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Mie Ayam</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 28.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Mie ayam menyajikan olahan mie yang
+                        lembut,
+                        mie kenyal berpadu dengan potongan ayam berbumbu manis-gurih, disempurnakan kuah bening yang
+                        menenangkan setiap suapan.</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MENU/MAKANAN BERAT/Pecel.png" alt="Nasi Pecel"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Nasi Pecel</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 28.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Pecel kacang gurih manis dengan sayuran
+                        segar dan lauk renyah rempeyek kacang dan bakwan udang yang nikmat.</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MENU/MAKANAN BERAT/NASI KERANG.png" alt="Nasi Kerang Telur"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Nasi Kerang Telur</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 33.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Nasi Kerang Gurih Pedas menawarkan
+                        sensasi
+                        pedas gurih, kerang segar berpadu dengan sambal merah yang membalut menciptakan hidangan kaya
+                        rasa
+                        yang menggugah selera di setiap suapan.</p>
+                </div>
+                <!-- Item 5 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MENU/MAKANAN BERAT/SOTO BANDUNG.png" alt="Soto Bandung"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Soto Bandung</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 28.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Soto Bandung segar dengan kuah bening
+                        hangat, aroma bawang goreng yang khas, serta potongan lobak dan daging sapi empuk, menawarkan
+                        rasa
+                        ringan namun penuh kehangatan di setiap seruputnya.</p>
+                </div>
+                <!-- Item 6 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MENU/MAKANAN BERAT/LONTONG KARI.png" alt="Lontong Kari"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Lontong Kari</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 28.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Lontong Kari menyuguhkan paduan kental
+                        beraroma rempah, lontong lembut yang meresap bumbu gurih berpadu dengan daging sapi dan telur
+                        rebus,
+                        menghadirkan kelezatan kaya dan memanjakan lidah.</p>
+                </div>
+                <!-- Item 7 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MENU/MAKANAN BERAT/LODEH PINDANG.png" alt="Lodeh Pindang Telur"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Lodeh Pindang Telur
+                    </h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 33.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Lodeh Pindang Telur otentik menghadirkan
+                        kuah santan gurih beraroma rempah, berpadu dengan telur rebus yang lembut, menciptakan rasa
+                        hangat
+                        tradisional yang menenangkan di setiap suapan.</p>
+                </div>
+                <!-- Item 8 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MENU/MAKANAN BERAT/CABE IJO.png" alt="Cumi Cabe Ijo"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Cumi Cabe Ijo</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 28.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Cumi Cabe Ijo menyuguhkan sensasi pedas
+                        segar, cumi kenyal berpadu dengan sambal cabe ijo yang pedas gurih, menghadirkan kelezatan laut
+                        yang
+                        bikin nagih.</p>
+                </div>
+                <!-- Item 9 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MENU/MAKANAN BERAT/KETOPRAK.png" alt="Ketoprak"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Ketoprak</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 28.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Ketoprak menghadirkan perpaduan lontong
+                        lembut, tahu goreng, bihun, dan tauge segar, disiram bumbu kacang gurih manis, menawarkan
+                        harmoni
+                        rasa khas Jakarta yang otentik.</p>
+                </div>
+            </div>
+            <div class="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+                <!-- Item 1 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MENU/MAKANAN BERAT/RAWON.png" alt="Rawon"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Rawon</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 33.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Rawon menghadirkan aroma rempah yang
+                        dalam,
+                        kuah hitam pekat dari kluwek memberi rasa gurih khas, sementara potongan daging sapi empuk
+                        menambah
+                        kelezatan setiap suapan.</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MENU/MAKANAN BERAT/mie.png" alt="Mie Ayam"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Mie Ayam</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 28.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Mie ayam menyajikan olahan mie yang
+                        lembut,
+                        mie kenyal berpadu dengan potongan ayam berbumbu manis-gurih, disempurnakan kuah bening yang
+                        menenangkan setiap suapan.</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MENU/MAKANAN BERAT/Pecel.png" alt="Nasi Pecel"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Nasi Pecel</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 28.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Pecel kacang gurih manis dengan sayuran
+                        segar dan lauk renyah rempeyek kacang dan bakwan udang yang nikmat.</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MENU/MAKANAN BERAT/NASI KERANG.png" alt="Nasi Kerang Telur"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Nasi Kerang Telur</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 33.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Nasi Kerang Gurih Pedas menawarkan
+                        sensasi
+                        pedas gurih, kerang segar berpadu dengan sambal merah yang membalut menciptakan hidangan kaya
+                        rasa
+                        yang menggugah selera di setiap suapan.</p>
+                </div>
+                <!-- Item 5 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MENU/MAKANAN BERAT/SOTO BANDUNG.png" alt="Soto Bandung"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Soto Bandung</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 28.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Soto Bandung segar dengan kuah bening
+                        hangat, aroma bawang goreng yang khas, serta potongan lobak dan daging sapi empuk, menawarkan
+                        rasa
+                        ringan namun penuh kehangatan di setiap seruputnya.</p>
+                </div>
+                <!-- Item 6 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MENU/MAKANAN BERAT/LONTONG KARI.png" alt="Lontong Kari"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Lontong Kari</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 28.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Lontong Kari menyuguhkan paduan kental
+                        beraroma rempah, lontong lembut yang meresap bumbu gurih berpadu dengan daging sapi dan telur
+                        rebus,
+                        menghadirkan kelezatan kaya dan memanjakan lidah.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- MINUMAN & CEMILAN CONTENT -->
+        <div id="minuman-content" class="hidden">
+            <h2 class="relative z-10 text-imah-blue font-pulang text-6xl md:text-7xl mb-12 drop-shadow-sm mt-8">Cemilan
+            </h2>
+            <div class="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+                <!-- Cemilan 1 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MINUMAN/ketan.png" alt="Ketan Susu Keju"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Ketan Susu Keju</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 33.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Ketan hangat disiram susu kental manis
+                        dan parutan keju melimpah, menghadirkan rasa manis gurih yang pas di lidah.</p>
+                </div>
+                <!-- Cemilan 2 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MINUMAN/peyem.png" alt="Peyeum Goreng"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Peyeum Goreng</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 28.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Peuyeum singkong khas Bandung yang
+                        digoreng krispi di luar namun lembut dan manis di dalam.</p>
+                </div>
+                <!-- Cemilan 3 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MINUMAN/candil.png" alt="Candil Unggu"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Candil Unggu</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 28.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Bola-bola kenyal dari ubi ungu yang
+                        disajikan dengan kuah santan gurih, memberikan rasa manis dan tekstur lembut.</p>
+                </div>
+            </div>
+
+            <h2 class="relative z-10 text-imah-blue font-pulang text-6xl md:text-7xl mb-12 drop-shadow-sm mt-16">Minuman
+            </h2>
+            <div class="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+                <!-- Minuman 1 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MINUMAN/kopi.png" alt="Kopi Vietnam Drip"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Kopi vietnam drip</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 33.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Kopi pekat hasil seduhan metode drip
+                        perlahan yang berpadu dengan susu kental manis di dasar gelas, menghasilkan cita rasa kuat dan
+                        manis.</p>
+                </div>
+                <!-- Minuman 2 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MINUMAN/teh.png" alt="Es Teh Manis"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Es Teh Manis</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 28.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Teh melati seduh tradisional yang
+                        disajikan dingin dengan es batu, manis segar cocok untuk menghilangkan dahaga.</p>
+                </div>
+                <!-- Minuman 3 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="assets/MINUMAN/air.png" alt="Air Mineral"
+                        class="w-full aspect-[4/3] object-cover rounded-sm mb-4 shadow-sm">
+                    <h3 class="text-imah-blue font-bold text-3xl md:text-4xl mb-1 tracking-wide">Air Mineral</h3>
+                    <p class="text-imah-blue font-light text-2xl md:text-3xl mb-3">Rp 28.000</p>
+                    <p class="text-black text-base font-light md:text-lg px-2">Air mineral dalam kemasan untuk
+                        menyegarkan dan mengembalikan hidrasi tubuh Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-white pt-16 pb-8 px-6 md:px-12 border-t border-gray-200 mt-16">
@@ -184,7 +478,7 @@
 
             <!-- Middle: Info -->
             <div class="w-full md:w-1/2 flex items-start md:items-center">
-                <div class="w-full max-w-[200px]">
+                <div class="w-full max-w-[20vw]">
                     <div class="bg-imah-yellow py-2 px-4 rounded-md mb-4 inline-block shadow-sm">
                         <h3 class="font-pulang text-xl font-bold">Info Imah Babaturan</h3>
                     </div>
@@ -286,6 +580,36 @@
             <p>&copy; 2026 PT Warisan Ibu Bapak</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const btnMakanan = document.getElementById('btn-makanan');
+            const btnMinuman = document.getElementById('btn-minuman');
+            const makananContent = document.getElementById('makanan-content');
+            const minumanContent = document.getElementById('minuman-content');
+
+            btnMakanan.addEventListener('click', function () {
+                makananContent.classList.remove('hidden');
+                minumanContent.classList.add('hidden');
+
+                // Makanan active style
+                btnMakanan.className = 'bg-imah-yellow text-imah-blue px-6 py-2 rounded-md transition shadow-sm text-lg md:text-xl border border-imah-yellow';
+                // Minuman inactive style
+                btnMinuman.className = 'text-white bg-imah-blue px-6 py-2 rounded-md hover:bg-imah-blue transition shadow-sm text-lg md:text-xl border';
+            });
+
+            btnMinuman.addEventListener('click', function () {
+                minumanContent.classList.remove('hidden');
+                makananContent.classList.add('hidden');
+
+                // Minuman active style
+                btnMinuman.className = 'bg-imah-yellow text-imah-blue px-6 py-2 rounded-md transition shadow-sm text-lg md:text-xl border border-imah-yellow';
+                // Makanan inactive style
+                btnMakanan.className = 'text-white bg-imah-blue px-6 py-2 rounded-md hover:bg-imah-blue transition shadow-sm text-lg md:text-xl border';
+            });
+        });
+    </script>
+
 </body>
 
 </html>

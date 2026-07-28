@@ -49,7 +49,7 @@
 <body class="bg-white font-tommy antialiased text-gray-800 min-h-screen flex flex-col overflow-x-hidden">
 
     <!-- Navbar (White Background) -->
-    <nav class="bg-white py-3 px-6 md:px-12 flex justify-between items-center sticky top-0 z-50 shadow-sm">
+    <nav class="bg-imah-yellow py-3 px-6 md:px-12 flex justify-between items-center sticky top-0 z-50 shadow-sm">
         <!-- Logo Area -->
         <a href="index.html" class="flex flex-col text-center uppercase tracking-tighter leading-none text-imah-dark">
             <span class="text-[0.55rem] font-bold">WARUNG KOPI</span>
@@ -64,6 +64,8 @@
 
         <!-- Links & Cart -->
         <div class="hidden md:flex items-center gap-4 lg:gap-8">
+            <a href="index.html"
+                class="bg-imah-blue text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide shadow-md hover:bg-blue-800 transition">BERANDA</a>
             <a href="cabang.html"
                 class="bg-imah-blue text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide shadow-md hover:bg-blue-800 transition">CABANG</a>
             <a href="produk.html"
@@ -91,11 +93,6 @@
         </button>
     </nav>
 
-    <!-- Banner -->
-    <div class="bg-imah-yellow py-3 text-center shadow-sm relative z-40">
-        <h2 class="text-imah-blue text-xl md:text-2xl font-bold tracking-wide">Kabar Dari Teman</h2>
-    </div>
-
     <!-- Hero Section -->
     <section class="relative w-full h-[80vh] md:h-[calc(100vh-130px)] overflow-hidden bg-black">
 
@@ -116,20 +113,20 @@
             <div class="relative w-full max-w-3xl aspect-[4/3] md:aspect-video flex items-center justify-center">
 
                 <!-- White Sticky Note -->
-                <div
-                    class="absolute z-10 left-8 md:left-[40%] top-16 md:-top-[25%] w-48 md:w-72 transition hover:rotate-6 duration-300 scale-[220%] transform">
+                <div onclick="document.getElementById('cerita-section').scrollIntoView({behavior: 'smooth'})"
+                    class="cursor-pointer absolute z-10 left-8 md:left-[40%] top-16 md:-top-[25%] w-48 md:w-72 transition hover:rotate-6 duration-300 scale-[220%] transform">
                     <img src="assets/KONTAK/kertas.png" alt="Note" class="w-full h-auto drop-shadow-xl">
                 </div>
 
                 <!-- Coffee Cup -->
-                <div
-                    class="absolute right-8 md:-right-[30%] top-4 md:-top-[25%] z-20 w-40 md:w-64 transition hover:scale-[330%] scale-[320%] duration-300">
+                <div onclick="document.getElementById('footer-section').scrollIntoView({behavior: 'smooth'})"
+                    class="cursor-pointer absolute right-8 md:-right-[30%] top-4 md:-top-[25%] z-20 w-40 md:w-64 transition hover:scale-[330%] scale-[320%] duration-300">
                     <img src="assets/KONTAK/kopi.png" alt="Coffee" class="w-full h-auto">
                 </div>
 
                 <!-- Pen -->
-                <div
-                    class="absolute bottom-16 md:-bottom-[10%] left-20 md:left-[70%] z-30 w-64 md:w-96 transition hover:scale-[310%] scale-[300%] duration-300 transform">
+                <div onclick="document.getElementById('lokasi-section').scrollIntoView({behavior: 'smooth'})"
+                    class="cursor-pointer absolute bottom-16 md:-bottom-[10%] left-20 md:left-[70%] z-30 w-64 md:w-96 transition hover:scale-[310%] scale-[300%] duration-300 transform">
                     <img src="assets/KONTAK/pulpen.png" alt="Pen" class="w-full h-auto drop-shadow-xl">
                 </div>
 
@@ -158,8 +155,8 @@
     <section class="w-full max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
 
         <!-- Cerita yang Bikin Senang Form -->
-        <div class="max-w-3xl mx-auto flex flex-col items-center mb-24 md:mb-32">
-            <h2 class="font-pulang text-imah-blue text-4xl md:text-[3.5rem] mb-10 text-center tracking-wide font-bold">
+        <div id="cerita-section" class="max-w-3xl mx-auto flex flex-col items-center mb-24 md:mb-32">
+            <h2 class="font-pulang text-imah-blue text-4xl md:text-[3.5rem] mb-10 text-center tracking-wide">
                 Cerita yang Bikin Senang</h2>
             <input type="text"
                 class="w-full border-4 border-imah-blue rounded-full px-8 py-4 md:py-5 mb-6 focus:outline-none focus:ring-4 focus:ring-blue-300 text-lg md:text-xl shadow-inner bg-white">
@@ -168,8 +165,8 @@
         </div>
 
         <!-- Lokasi -->
-        <div class="w-full">
-            <h2 class="text-imah-blue text-4xl md:text-6xl font-bold mb-10 md:mb-16">Lokasi</h2>
+        <div id="lokasi-section" class="w-full">
+            <h2 class="text-imah-blue font-pulang md:text-6xl mb-10 md:mb-16">Lokasi</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
 
@@ -185,7 +182,7 @@
                     <a href="https://wa.me/6281300000000" target="_blank" rel="noopener noreferrer"
                         class="block w-full max-w-[320px] border-2 border-gray-100 bg-white shadow-sm hover:shadow-md transition">
                         <div
-                            class="text-center py-4 border-b-4 border-imah-yellow font-bold text-xl md:text-2xl text-black">
+                            class="text-center py-4 border-2 border-imah-yellow font-bold text-xl md:text-2xl text-black">
                             0813 0000 0000
                         </div>
                         <div
@@ -207,7 +204,7 @@
                     <a href="https://wa.me/6281300000000" target="_blank" rel="noopener noreferrer"
                         class="block w-full max-w-[320px] border-2 border-gray-100 bg-white shadow-sm hover:shadow-md transition">
                         <div
-                            class="text-center py-4 border-b-4 border-imah-yellow font-bold text-xl md:text-2xl text-black">
+                            class="text-center py-4 border-2 border-imah-yellow font-bold text-xl md:text-2xl text-black">
                             0813 0000 0000
                         </div>
                         <div
@@ -224,7 +221,7 @@
 
 
     <!-- Footer -->
-    <footer class="bg-white pt-16 pb-8 px-6 md:px-12 border-t border-gray-200 mt-16">
+    <footer id="footer-section" class="bg-white pt-16 pb-8 px-6 md:px-12 border-t border-gray-200 mt-16">
         <div class="max-w-full mx-auto flex flex-col md:flex-row justify-between gap-12 mb-16">
 
             <!-- Left: Logo -->
@@ -244,7 +241,7 @@
 
             <!-- Middle: Info -->
             <div class="w-full md:w-1/2 flex items-start md:items-center">
-                <div class="w-full max-w-[200px]">
+                <div class="w-full max-w-[20vw]">
                     <div class="bg-imah-yellow py-2 px-4 rounded-md mb-4 inline-block shadow-sm">
                         <h3 class="font-pulang text-xl font-bold">Info Imah Babaturan</h3>
                     </div>
