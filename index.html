@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warung Kopi Imah Babaturan</title>
+    <link rel="icon" type="image/png" href="assets/navicon.png">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -49,13 +50,23 @@
 <body class="bg-gray-100 font-tommy antialiased text-gray-800 min-h-screen flex flex-col">
 
     <!-- Navbar -->
-    <nav class="bg-imah-yellow px-6 md:px-12 flex justify-between items-center sticky top-0 z-50 shadow-sm">
+    <nav
+        class="bg-imah-yellow px-6 md:px-12 py-3 md:py-0 flex justify-between items-center sticky top-0 z-50 shadow-sm relative">
         <!-- Logo Area -->
         <a href="index.html" class="flex flex-col items-center justify-center">
             <img src="assets/navicon.png" class="w-auto h-14" alt="">
         </a>
 
-        <!-- Links & Cart -->
+        <!-- Burger Button (Mobile) -->
+        <button id="mobile-menu-btn"
+            class="md:hidden flex items-center justify-center text-imah-blue hover:opacity-80 transition focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <!-- Desktop Links & Cart -->
         <div class="hidden md:flex items-center gap-4 lg:gap-8">
             <a href="index.html"
                 class="bg-imah-blue text-white px-5 py-1 rounded-full font-light tracking-wide hover:bg-blue-900 transition shadow-md">BERANDA</a>
@@ -73,8 +84,27 @@
         </div>
     </nav>
 
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu"
+        class="hidden md:hidden bg-imah-yellow w-full absolute z-40 shadow-md border-t border-yellow-500 top-[80px]">
+        <div class="flex flex-col items-center py-6 space-y-4">
+            <a href="index.html"
+                class="bg-imah-blue text-white px-5 py-2 rounded-full font-light tracking-wide hover:bg-blue-900 transition shadow-md w-2/3 text-center">BERANDA</a>
+            <a href="cabang.html"
+                class="bg-imah-blue text-white px-5 py-2 rounded-full font-light tracking-wide hover:bg-blue-900 transition shadow-md w-2/3 text-center">CABANG</a>
+            <a href="produk.html"
+                class="bg-imah-blue text-white px-5 py-2 rounded-full font-light tracking-wide hover:bg-blue-900 transition shadow-md w-2/3 text-center">PRODUK</a>
+            <a href="kontak.html"
+                class="bg-imah-blue text-white px-5 py-2 rounded-full font-light tracking-wide hover:bg-blue-900 transition shadow-md w-2/3 text-center">KONTAK</a>
+
+            <a href="#" class="pt-2 hover:opacity-80 transition">
+                <img src="assets/beranda.png" class="w-auto h-12" alt="">
+            </a>
+        </div>
+    </div>
+
     <!-- Main Content Area -->
-    <main class="flex-grow relative w-full h-[85vh] md:h-[calc(100vh-60px)] bg-cover bg-center overflow-hidden"
+    <main class="flex-grow relative w-full h-full md:h-[calc(100vh-60px)] bg-cover bg-center overflow-hidden"
         style="background-image: url('assets/BERANDA/HERO\ IMAGE\ 1.png');">
         <!-- Content Container -->
         <div class="relative h-full w-full max-w-full mx-auto px-6 md:px-12 py-10 flex flex-col justify-between">
@@ -96,8 +126,7 @@
     <!-- About & Philosophy Section (2x2 Grid) -->
     <section class="grid grid-cols-1 md:grid-cols-2 w-full">
         <!-- Top Left: Image of Founder -->
-        <div class="h-full md:h-auto md:min-h-[90vh] bg-cover"
-            style="background-image: url('assets/BERANDA/HERO\ IMAGE\ 2.png');">
+        <div class="h-auto min-h-[90vh] bg-cover" style="background-image: url('assets/BERANDA/HERO\ IMAGE\ 2.png');">
         </div>
 
         <!-- Top Right: Founder Info (Blue) -->
@@ -143,13 +172,11 @@
         </div>
     </section>
 
-
     <!-- Footer -->
     <footer class="bg-white pt-16 pb-8 px-6 md:px-12 border-t border-gray-200 mt-16">
-        <div class="max-w-full mx-auto flex flex-col md:flex-row justify-between gap-12 mb-16">
-
+        <div class="w-full md:mx-auto flex flex-col md:flex-row justify-center md:justify-between md:gap-12 mb-16">
             <!-- Left: Logo -->
-            <div class="w-full md:w-1/4 flex justify-start md:justify-center">
+            <div class="w-full md:w-1/4 flex justify-center">
                 <a href="index.html"
                     class="flex flex-col text-center uppercase tracking-tighter leading-none text-imah-dark">
                     <img src="assets/footericon.png" class="h-32" alt="">
@@ -157,8 +184,8 @@
             </div>
 
             <!-- Middle: Info -->
-            <div class="w-full md:w-1/2 flex items-start md:items-center">
-                <div class="w-full max-w-[20vw]">
+            <div class="w-full md:w-1/2 flex flex-col md:flex-row items-center gap-5 md:gap-0">
+                <div class="w-full md:max-w-[20vw] flex flex-col items-center md:items-start gap-5 md:gap-0">
                     <div class="bg-imah-yellow py-2 px-4 rounded-md mb-4 inline-block shadow-sm">
                         <h3 class="font-pulang text-xl font-bold">Info Imah Babaturan</h3>
                     </div>
@@ -185,7 +212,7 @@
                     <!-- Right: Branches Info -->
                     <div class="w-full flex flex-col gap-8">
                         <!-- Cabang 1 -->
-                        <div>
+                        <div class="flex flex-col items-center md:items-start">
                             <h4 class="font-medium text-lg mb-2 text-gray-800">Cabang 1</h4>
                             <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                                 <!-- Contact Box -->
@@ -200,7 +227,8 @@
                                     </div>
                                 </div>
                                 <!-- Address -->
-                                <p class="text-[12px] font-medium text-gray-600 leading-relaxed max-w-[250px]">
+                                <p
+                                    class="text-[12px] text-center md:text-left font-medium text-gray-600 leading-relaxed max-w-[250px]">
                                     Jl. Kebon Bibit No.3,<br>
                                     Tamansari, Kec. Bandung Wetan,<br>
                                     Kota Bandung, Jawa Barat 40116
@@ -208,7 +236,7 @@
                             </div>
                         </div>
                         <!-- Cabang 2 -->
-                        <div>
+                        <div class="flex flex-col items-center md:items-start">
                             <h4 class="font-medium text-lg mb-2 text-gray-800">Cabang 2</h4>
                             <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                                 <!-- Contact Box -->
@@ -223,7 +251,8 @@
                                     </div>
                                 </div>
                                 <!-- Address -->
-                                <p class="text-[12px] font-medium text-gray-600 leading-relaxed max-w-[250px]">
+                                <p
+                                    class="text-[12px] text-center md:text-left font-medium text-gray-600 leading-relaxed max-w-[250px]">
                                     Jl. Tamansari No.51a,<br>
                                     Lb. Siliwangi, Kecamatan Coblong,<br>
                                     Kota Bandung, Jawa Barat 40132
@@ -248,6 +277,20 @@
             <p>&copy; 2026 PT Warisan Ibu Bapak</p>
         </div>
     </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
