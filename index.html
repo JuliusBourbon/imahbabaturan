@@ -44,14 +44,47 @@
         .font-jakarta-sans {
             font-family: "Plus Jakarta Sans", sans-serif;
         }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(2rem);
+            transition: all 1.5s ease-out;
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-on-scrolll {
+            opacity: 0;
+            transform: translateX(-2rem);
+            transition: all 1.5s ease-out;
+        }
+
+        .animate-on-scrolll.is-visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .animate-on-scrollr {
+            opacity: 0;
+            transform: translateX(2rem);
+            transition: all 1.5s ease-out;
+        }
+
+        .animate-on-scrollr.is-visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
     </style>
 </head>
 
 <body class="bg-gray-100 font-tommy antialiased text-gray-800 min-h-screen flex flex-col">
 
     <!-- Navbar -->
-    <nav
-        class="bg-imah-yellow px-6 md:px-12 py-3 md:py-0 flex justify-between items-center sticky top-0 z-50 shadow-sm relative">
+    <nav id="navbar"
+        class="bg-imah-yellow px-6 md:px-12 py-3 md:py-0 flex justify-between items-center sticky top-0 z-50 shadow-sm relative transition-transform duration-300 ease-in-out">
         <!-- Logo Area -->
         <a href="index.html" class="flex flex-col items-center justify-center">
             <img src="assets/navicon.png" class="w-auto h-14" alt="">
@@ -115,7 +148,7 @@
             <!-- Bottom Left Text -->
             <div class="self-start mb-4 md:mb-10 ml-2 md:ml-4">
                 <h2
-                    class="font-pulang text-white text-3xl md:text-4xl lg:text-6xl leading-[1.1] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">
+                    class="animate-on-scroll font-pulang text-white text-3xl md:text-4xl lg:text-6xl leading-[1.1] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">
                     frekuensi<br>sama, obrolan<br>tanpa jeda.
                 </h2>
             </div>
@@ -138,12 +171,15 @@
 
             <div class="flex flex-col gap-12">
                 <div class="flex flex-col mb-20">
-                    <h3 class="text-white text-5xl md:text-7xl font-extrabold leading-[1.1] mb-2 tracking-tight">
+                    <h3
+                        class="animate-on-scrollr text-white text-5xl md:text-7xl font-extrabold leading-[1.1] mb-2 tracking-tight">
                         Mohammad<br>Nurul Hudha</h3>
-                    <p class="text-white md:text-2xl mb-16 font-light">Founder<br>Warung Kopi Imah Babaturan
+                    <p class="animate-on-scrollr text-white md:text-2xl mb-16 font-light">Founder<br>Warung Kopi Imah
+                        Babaturan
                     </p>
                 </div>
-                <p class="text-white font-jakarta-sans text-base md:text-lg leading-relaxed text-justify">
+                <p
+                    class="animate-on-scrollr text-white font-jakarta-sans text-base md:text-lg leading-relaxed text-justify">
                     Menjadi tempat makan yang "mengalir apa adanya" namun tetap punya potensi untuk terus berkembang. Di
                     mana setiap orang yang datang pasti bisa makan sampai kenyang, dengan suasana sehangat rumah teman
                     sendiri
@@ -153,10 +189,10 @@
 
         <!-- Bottom Left: Philosophy (White) -->
         <div class="bg-white p-10 md:p-20 flex flex-col justify-center items-center md:items-start gap-12">
-            <p class="text-gray-600 text-sm md:text-2xl leading-relaxed">
+            <p class="animate-on-scrolll text-gray-600 text-sm md:text-2xl leading-relaxed">
                 Menyajikan Masakan Rumahan yang Jujur dan Otentik menggunakan resep asli turun-temurun dari ibunda
             </p>
-            <p class="text-gray-600 text-sm md:text-2xl leading-relaxed">
+            <p class="animate-on-scrolll text-gray-600 text-sm md:text-2xl leading-relaxed">
                 Memberikan Pengalaman Makan di Rumah Teman menciptakan suasana hangat, akrab sehingga setiap pengunjung
                 merasa nyaman seperti bertamu ke rumah sahabat.
             </p>
@@ -166,7 +202,7 @@
         <div class="h-[50vh] md:h-auto md:min-h-[600px] bg-cover bg-center relative flex items-center justify-end p-10 md:p-16"
             style="background-image: url('assets/BERANDA/HERO\ IMAGE\ 3.png');">
             <h2
-                class="relative z-10 font-pulang text-white text-5xl md:text-7xl leading-[1.1] text-right drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] max-w-sm md:max-w-[40vw]">
+                class="animate-on-scrollr relative z-10 font-pulang text-white text-5xl md:text-7xl leading-[1.1] text-right drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] max-w-sm md:max-w-[40vw]">
                 Nyaman<br>Seperti di<br>Rumah Teman
             </h2>
         </div>
@@ -301,6 +337,42 @@
                     mobileMenu.classList.toggle('hidden');
                 });
             }
+
+            // Navbar hide on scroll down, show on scroll up
+            let lastScrollTop = 0;
+            const navbar = document.getElementById('navbar');
+
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop && scrollTop > 80) {
+                    // Scroll Down
+                    navbar.style.transform = 'translateY(-100%)';
+                } else {
+                    // Scroll Up
+                    navbar.style.transform = 'translateY(0)';
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            // Intersection Observer for animate-on-scroll
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.animate-on-scroll, .animate-on-scrolll, .animate-on-scrollr').forEach((el) => {
+                observer.observe(el);
+            });
         });
     </script>
 </body>
